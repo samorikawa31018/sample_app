@@ -1,0 +1,12 @@
+<h2>タイトル</h2>
+<%= @post.title %>
+<h2>本文</h2>
+<%= @post.body %>
+
+<h2>画像</h2>
+<%= attachment_image @post, :image, :fill, 100, 100  %>
+
+<%= link_to "編集", edit_post_path(@post.id), class: "btn edit-btn" %>
+<%= link_to "削除", destroy_post_path(@post.id), method: :delete, class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>
+
+
